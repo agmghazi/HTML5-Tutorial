@@ -256,5 +256,43 @@
     this is table and  &pound;  &yen; &copy;  &micro; &reg; &euro; this is bed
    </h3>
 
+   <br><br> <br><br> <br><br> <br><br> <br>
+   
+   <div id="mydiv"> </div>
+   <div id="mydiv1"> </div>
+   <div id="mydiv2"></div>
+   <div id="mydiv3"></div>
+   <div id="mydiv4"></div>
+   <div id="mydiv5"></div>
+   <div id="mydiv6"></div>
+
+
+   </div>
+   <script>
+   if (typeof(Storage)!=="undefined") {
+       localStorage.setItem("firstname","ahmed");
+       localStorage.setItem("firstname2","ali");
+       localStorage.setItem("firstname3","osama");
+       localStorage.setItem("firstname4","midoo");
+       localStorage.setItem("firstname5","eslam");
+      // localStorage.setItem("firstname6","ayman");
+      localStorage.removeItem("firstname6");
+
+        document.getElementById("mydiv1").innerHTML=localStorage.getItem("firstname")+"<br>";
+        document.getElementById("mydiv2").innerHTML=localStorage.getItem("firstname2")+"<br>";
+        document.getElementById("mydiv3").innerHTML=localStorage.getItem("firstname3")+"<br>";
+        document.getElementById("mydiv4").innerHTML=localStorage.getItem("firstname4")+"<br>";
+        document.getElementById("mydiv5").innerHTML=localStorage.getItem("firstname5")+"<br>";
+        document.getElementById("mydiv6").innerHTML=localStorage.getItem("firstname6");
+
+
+   } else {
+       document.getElementById("mydiv").innerHTML="your browser not support";
+   
+   }
+   </script>
+
+
+
     </body>
 </html>
