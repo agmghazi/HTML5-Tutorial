@@ -156,6 +156,47 @@
      </p>   
 
 
+     <br><br><br><br><br>
+     <canvas id="thiscanvas" width="100" height="100" style="background-color:gold">  </canvas>
+        
+            <br><br>
+      <canvas id="thiscanvas1" width="100" height="100">  </canvas>
+          
+      <script>
+      var canv = document.getElementById("thiscanvas1");
+      var canShape= canv.getContext("2d");
+      canShape.fillStyle="blue";
+      canShape.fillRect(0,0,400,700);
+      canShape.moveTo(0,0);
+      canShape.lineTo(400,400);
+      
+      canShape.stroke();
+      </script>
+    
+
+    <br><br>
+    <canvas id="thiscanvas2" width="500" height="500" style="border:4px solid black">  </canvas>
+        
+    <script>
+    var canv2 = document.getElementById("thiscanvas2");
+    var canCircle= canv2.getContext("2d");
+    canCircle.beginPath();
+    canCircle.arc(180,100,80,59,2*Math.PI);
+    canCircle.stroke();
+    </script>
+ 
+    <br><br>
+    <canvas id="thiscanvas3" width="500" height="500" style="border:4px solid black">  </canvas>
+        
+    <script>
+    var canv3 = document.getElementById("thiscanvas3");
+    var canText= canv3.getContext("2d");
+    canText.font="50px Arial";
+    //canText.fillText("ahmed jamal" ,100 ,100);
+   canText.strokeText("ahmed jamal" ,100 ,100);
+    </script>
+
+
 
     </body>
 </html>
