@@ -207,6 +207,34 @@
 
     </svg>
 
+    <br><br> <br><br> <br><br> <br><br> <br>
+   <p> Please drag image </p>
+   
+   <div id="mydiv" style="width:400;height: 400;padding:20px;margin:40px;border:6px solid black" 
+    ondrop="dropMe(event)" ondragover="myDrop(event)">
+    
+   </div>
+   <br>
+   <img id="drag" src="img/cat.jpg" alt="my cat" width="200" draggable="true" ondragstart="dragFunction(event)"/>
+
+    <script>
+    function myDrop(e)
+    {
+        e.preventDefault();
+    }
+    function dragFunction (e)
+    {
+        e.dataTransfer.setData("text/html",e.target.id);
+    }
+    function dropMe (e)
+    {
+        e.preventDefault();
+        var data=e.dataTransfer.getData("text/html");
+        e.target.appendChild(document.getElementById(data));
+    }
+    </script>
+
+
 
     </body>
 </html>
